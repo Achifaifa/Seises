@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ Board()
+comment0.text=\n\ Constructor\ del\ marcador\n
+comment1.params=world
+comment1.target=void\ addedToWorld(greenfoot.World)
+comment1.text=\n\ Create\ some\ new\ text\n
+comment2.params=
+comment2.target=void\ setText()
+comment2.text=\n\ Changes\ the\ text\ on\ the\ display\n
+comment3.params=numOfTurns\ turn
+comment3.target=void\ update(int,\ int)
+comment3.text=\n\ Actualiza\ el\ marcador\ indicando\ el\ numero\ de\ turnos\ y\ el\ turno\ del\ jugador\n\ @param\ el\ n?mero\ de\ turnos\n\ @param\ el\ turno\n
+comment4.params=theWinner
+comment4.target=void\ showTheWinner(java.lang.String)
+comment4.text=\ \n\ Muestra\ el\ mensaje\ the\ fon\ de\ juego\ y\ el\ nombre\ del\ jugador\n\ @param\ el\ nombre\ del\ jugador\n
+numComments=5

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=card
+comment0.target=boolean\ canAddCard(Card)
+comment0.text=\n\ Determina\ si\ aceptar\ la\ carta\ es\ legal,\ es\ decir,\ cumple\ las\ reglas\ del\ juego\n\ @param\ la\ carta\n\ @return\ true\ si\ el\ movimiento\ es\ legal,\ y\ flase,\ en\ caso\ contrario\n
+comment1.params=card
+comment1.target=void\ addCard(Card)
+comment1.text=\n\ Acepta\ la\ carta\ y\ lo\ almacena\ en\ su\ estructura\ de\ datos\ interna\n\ @param\ la\ carta\n
+numComments=2

@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=players
+comment0.target=TableTurn(java.lang.Object[])
+comment0.text=\n\ Constructor\ del\ controlador\ de\ turnos\n\ @param\ los\ jugadores\n\ @param\ un\ entero\ entre\ el\ rango\ de\ los\ jugadores\n
+comment1.params=players\ p
+comment1.target=TableTurn(java.lang.Object[],\ java.lang.Object)
+comment1.text=\n\ Constructor\ del\ controlador\ de\ turnos\n\ @param\ los\ jugadores\n\ @param\ un\ entero\ entre\ el\ rango\ de\ los\ jugadores\n
+comment2.params=player\ p
+comment2.target=int\ getTurn(java.lang.Object[],\ java.lang.Object)
+comment3.params=
+comment3.target=void\ clear()
+comment4.params=
+comment4.target=int\ getNumOfTurn()
+comment5.params=
+comment5.target=int\ getTurn()
+comment6.params=
+comment6.target=java.lang.Object\ next()
+comment7.params=player
+comment7.target=boolean\ isMyturn(java.lang.Object)
+numComments=8

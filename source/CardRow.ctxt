@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.params=
+comment0.target=CardRow()
+comment1.params=world
+comment1.target=void\ addedToWorld(greenfoot.World)
+comment1.text=\n\ Adds\ the\ cardRow\ without\ cards\n
+comment2.params=
+comment2.target=boolean\ isEmpty()
+comment2.text=\n\ Determina\ si\ la\ fila\ esta\ vacia\n\ @return\ True\ si\ la\ fila\ esta\ vacia\ y\ False,\ en\ caso\ contrario\n
+comment3.params=
+comment3.target=boolean\ isCompleted()
+comment3.text=\n\ Determina\ si\ la\ fila\ esta\ complenta\n\ @return\ True\ si\ la\ fila\ esta\ completa\ y\ False,\ en\ caso\ contrario\n
+comment4.params=card
+comment4.target=boolean\ canAddCard(Card)
+comment4.text=\n\ Determina\ si\ aceptar\ la\ carta\ es\ legal,\ es\ decir,\ cumple\ las\ reglas\ del\ juego\n\ @param\ la\ carta\n\ @return\ true\ si\ el\ movimiento\ es\ legal,\ y\ flase,\ en\ caso\ contrario\n
+comment5.params=card
+comment5.target=void\ addCard(Card)
+comment5.text=\n\ Acepta\ la\ carta\ y\ lo\ almacena\ en\ su\ estructura\ de\ datos\ interna\n\ @param\ la\ carta\n
+comment6.params=card
+comment6.target=int\ getCardPosition(Card)
+comment7.params=card\ pos
+comment7.target=void\ add(Card,\ int)
+comment7.text=\n\ Acepta\ la\ carta\ y\ lo\ almacena\ en\ su\ estructura\ de\ datos\ interna\n\ @param\ la\ carta\n
+comment8.params=card
+comment8.target=void\ placeCard(Card)
+comment8.text=\n\ Coloca\ la\ carta\ en\ la\ fila\ de\ la\ mesa\n
+numComments=9

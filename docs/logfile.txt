@@ -1,0 +1,197 @@
+Project documentation
+<---- javadoc command: ---->
+/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin/javadoc
+-sourcepath
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises
+-source
+1.6
+-classpath
+/Applications/BlueJ 3.0.7/BlueJ.app/Contents/Resources/Java/bluejcore.jar:/Applications/BlueJ 3.0.7/BlueJ.app/Contents/Resources/Java/junit-4.8.2.jar:/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO-Felipe/3.Praktikak/12-13-gotomoon/6.Web-CAT/greenfoot-lib/greenfoot.jar:/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO-Felipe/3.Praktikak/12-13-gotomoon/6.Web-CAT/greenfoot-lib/bluejcore.jar:/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises
+-d
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/doc
+-encoding
+MacRoman
+-charset
+MacRoman
+-docletpath
+/Applications/BlueJ 3.0.7/BlueJ.app/Contents/Resources/Java/bjdoclet.jar
+-doclet
+bluej.doclet.doclets.formats.html.HtmlDoclet
+-doctitle
+seises
+-windowtitle
+seises
+-author
+-version
+-nodeprecated
+-package
+-link
+http://download.oracle.com/javase/6/docs/api/
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Joker.java
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/CacheActor.java
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Turn.java
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/BigText.java
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Deck.java
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Player.java
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Accepter.java
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/TableGame.java
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/CardRow.java
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/TableTurn.java
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Board.java
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Position.java
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Card.java
+<---- end of javadoc command ---->
+Loading source file /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Joker.java...
+Loading source file /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/CacheActor.java...
+Loading source file /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Turn.java...
+Loading source file /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/BigText.java...
+Loading source file /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Deck.java...
+Loading source file /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Player.java...
+Loading source file /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Accepter.java...
+Loading source file /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/TableGame.java...
+Loading source file /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/CardRow.java...
+Loading source file /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/TableTurn.java...
+Loading source file /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Board.java...
+Loading source file /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Position.java...
+Loading source file /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Card.java...
+Constructing Javadoc information...
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Joker.java:1: package greenfoot does not exist
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+^
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Card.java:1: package greenfoot does not exist
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+^
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/CacheActor.java:1: package greenfoot does not exist
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+^
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/CacheActor.java:11: cannot find symbol
+symbol: class Actor
+public abstract class CacheActor extends Actor
+                                         ^
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/CacheActor.java:14: cannot find symbol
+symbol  : class GreenfootImage
+location: class CacheActor
+    private static HashMap<String, GreenfootImage> images;
+                                   ^
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/BigText.java:1: package greenfoot does not exist
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+^
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/BigText.java:12: cannot find symbol
+symbol: class Actor
+public class BigText extends Actor
+                             ^
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/BigText.java:30: cannot find symbol
+symbol  : class World
+location: class BigText
+    public void addedToWorld(World world)
+                             ^
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Deck.java:1: package greenfoot does not exist
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+^
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Deck.java:12: cannot find symbol
+symbol: class Actor
+public class Deck extends Actor
+                          ^
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Player.java:1: package greenfoot does not exist
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+^
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Player.java:16: cannot find symbol
+symbol: class Actor
+public class Player  extends Actor implements Accepter
+                             ^
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Player.java:21: cannot find symbol
+symbol  : class GreenfootImage
+location: class Player
+    private GreenfootImage playerImage;
+            ^
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Player.java:43: cannot find symbol
+symbol  : class World
+location: class Player
+    public void addedToWorld(World world){
+                             ^
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/TableGame.java:1: package greenfoot does not exist
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+^
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/TableGame.java:9: cannot find symbol
+symbol: class World
+public class TableGame extends World
+                               ^
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/CardRow.java:1: package greenfoot does not exist
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+^
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/CardRow.java:13: cannot find symbol
+symbol: class Actor
+public class CardRow  extends Actor implements Accepter
+                              ^
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/TableTurn.java:1: package greenfoot does not exist
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+^
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/TableTurn.java:9: cannot find symbol
+symbol: class Actor
+public class TableTurn<T>  extends Actor implements Turn<T>
+                                   ^
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Board.java:1: package greenfoot does not exist
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+^
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Board.java:10: cannot find symbol
+symbol: class Actor
+public class Board extends Actor
+                           ^
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/CardRow.java:25: cannot find symbol
+symbol  : class World
+location: class CardRow
+    public void addedToWorld(World world){
+                             ^
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Board.java:30: cannot find symbol
+symbol  : class World
+location: class Board
+    public void addedToWorld(World world)
+                             ^
+Standard Doclet version 1.6.0_65
+Building tree for all the packages and classes...
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Position.java:7: warning - @version tag has no arguments.
+Generating /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/doc/Accepter.html...
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Accepter.java:21: warning - @param argument "la" is not a parameter name.
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Accepter.java:15: warning - @param argument "la" is not a parameter name.
+Generating /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/doc/BigText.html...
+Generating /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/doc/Board.html...
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Board.java:10: warning - @autor is an unknown tag.
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Board.java:69: warning - @param argument "el" is not a parameter name.
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Board.java:59: warning - @param argument "el" is not a parameter name.
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Board.java:59: warning - @param argument "el" is not a parameter name.
+Generating /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/doc/CacheActor.html...
+Generating /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/doc/Card.html...
+Generating /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/doc/Card.Colour.html...
+Generating /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/doc/Card.Suit.html...
+Generating /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/doc/Card.Value.html...
+Generating /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/doc/CardRow.html...
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/CardRow.java:90: warning - @param argument "la" is not a parameter name.
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/CardRow.java:56: warning - @param argument "la" is not a parameter name.
+Generating /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/doc/Deck.html...
+Generating /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/doc/Joker.html...
+Generating /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/doc/Player.html...
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Player.java:112: warning - @param argument "la" is not a parameter name.
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Player.java:98: warning - @param argument "la" is not a parameter name.
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/Player.java:203: warning - @param argument "la" is not a parameter name.
+Generating /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/doc/Position.html...
+Generating /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/doc/TableGame.html...
+Generating /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/doc/TableTurn.html...
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/TableTurn.java:20: warning - @param argument "los" is not a parameter name.
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/TableTurn.java:20: warning - @param argument "un" is not a parameter name.
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/TableTurn.java:31: warning - @param argument "los" is not a parameter name.
+/Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/TableTurn.java:31: warning - @param argument "un" is not a parameter name.
+Generating /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/doc/Turn.html...
+Generating /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/doc/package-frame.html...
+Generating /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/doc/package-summary.html...
+Generating /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/doc/package-tree.html...
+Generating /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/doc/constant-values.html...
+Building index for all the packages and classes...
+Generating /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/doc/overview-tree.html...
+Generating /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/doc/index-all.html...
+Building index for all classes...
+Generating /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/doc/allclasses-frame.html...
+Generating /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/doc/allclasses-noframe.html...
+Generating /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/doc/index.html...
+Generating /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/doc/help-doc.html...
+Generating /Users/felipe/Users/Irakaskuntza/Irakasgaiak/PMyOO/3.Praktikak/2013-14-Seikotan/4.Soluzioa/seises/doc/stylesheet.css...
+40 warnings

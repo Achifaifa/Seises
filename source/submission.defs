@@ -1,0 +1,6 @@
+Submission by http to WEB-CAT using LSI script {
+    .transport = message:Tienes que seleccionar una de las tareas;
+    .file.include=*.java;
+    .file.jar=<simpletitle>-<username>.jar;    
+    .insert = http://lsi.vc.ehu.es/pmyoo/bluej.php;
+}
