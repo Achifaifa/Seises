@@ -6,6 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.*;
 
 /**
  * Write a description of class Player here.
@@ -13,7 +14,7 @@ import java.util.Iterator;
  * @author Felipe I. Anfurrutia
  * @version 2014/3
  */
-public class Player  extends Actor implements Accepter, Position
+public class Player  extends Actor implements Accepter
 {
     /** The player's name */
     private String name;

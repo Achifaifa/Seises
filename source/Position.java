@@ -1,7 +1,6 @@
 import java.*;
 
-public interface Position{
-   public enum position{
+   public enum Position{
        NORTH(180), 
        SOUTH(0), 
        EAST(270),
@@ -9,7 +8,7 @@ public interface Position{
        
        private int deg;
        
-       private position(int deg) {
+       private Position(int deg) {
             this.deg=deg;
        }
        
@@ -17,5 +16,5 @@ public interface Position{
         return deg;
        }
     }
-}
+
       
