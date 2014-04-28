@@ -235,7 +235,7 @@ public class Card extends CacheActor
                 leaveAllCardsAsBefore();
                 Player player = (Player) getAccepter();
                 if (player.canSelect(this) && ((TableGame)getWorld()).isMyturn(player) ){
-                    player.incrementFailures();
+                    player.incrementFailures(this);
                     nextTurn();                
                 }                    
            }

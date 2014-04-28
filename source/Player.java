@@ -13,7 +13,7 @@ import java.util.Iterator;
  * @author Felipe I. Anfurrutia
  * @version 2014/3
  */
-public class Player  extends Actor implements Accepter
+public class Player  extends Actor implements Accepter, Position
 {
     /** The player's name */
     private String name;
