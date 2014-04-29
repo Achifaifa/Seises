@@ -161,7 +161,7 @@ public class Card extends CacheActor
      * If we're allowed to drag the card around and manage the dragging.
      */
     public void act() {
-        if(!canDrag) return; //If we're not allowed to move the card about, don't do anything
+        if(!canDrag) return; //If we're not allowed to move the card around, don't do anything
                 
         MouseInfo mouse = Greenfoot.getMouseInfo();
         if(! (mouse!=null && mouse.getActor()==this)) return; //If the mouse isn't used on this card, don't do anything
@@ -334,7 +334,7 @@ public class Card extends CacheActor
      * @return True si la crata es el 6 de corazones y False, en caso contrario
      */
     public boolean isSixHearts(){
-        //To-DO: Implementar
+        if (this.value==Value.SIX && this.suit==Suit.HEARTS){return true;}
         return false;
     }
 }

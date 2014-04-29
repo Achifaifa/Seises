@@ -216,7 +216,18 @@ public class TableGame extends World
      * @return El jugador que posee el 6 de corazones, es el que puede empezar la partida 
      */
     public Player whoIsFirst(){
-        //TO-DO: Implementar
+        //TO-DO
+        //
+        //tgt=card.card(Colour.RED,Value.SIX,Suit.HEARTS,false)
+        //for i in self.players:
+        //  if tgt in i.cards:
+        //    return i
+        
+        Card tgt=new Card(Card.Colour.RED,Card.Value.SIX,Card.Suit.HEARTS,false);
+        if (players[0].getCards().contains(tgt)){return players[0];};
+        if (players[1].getCards().contains(tgt)){return players[1];};
+        if (players[2].getCards().contains(tgt)){return players[2];};
+        if (players[3].getCards().contains(tgt)){return players[3];};
 
         return null;
     }
