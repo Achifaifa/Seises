@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.*;
-
 /**
  * Write a description of class Player here.
  * 
@@ -76,10 +75,18 @@ public class Player  extends Actor implements Accepter
     
     /**
      * Determine whether the player has cards in hand or not
-     * @return True if the player has cards on hand and False, otherwise
+     * @return True if the player has cards on hand and False otherwise
      */
     public boolean hasCards(){
-        //TO-DO: Implementar
+        //TO-DO
+        //
+        //if len(cards)<1:
+        //  return 0
+        //else:
+        //  return 1
+        
+        if (this.cards.size()<1){return false;}
+        else{return true;}
         
     }
     
@@ -159,19 +166,24 @@ public class Player  extends Actor implements Accepter
     }
    
     /**
-     * Calcula y devuelve el n?mero de cartas que tiene el jugador en la mano
+     * Calcula y devuelve el numero de cartas que tiene el jugador en la mano
      * @return el n?mero de cartas que tiene el jugador en la mano
      */
     public int numberOfCards(){
-        //TO-DO: implementar
+        //TO-DO
+        //
+        //return len(cards)
+        
+        return cards.size();
     }
     
     /**
      * Elimina la carta 'card'
      */
     public void remove(Card card){
-        //To-do: implementar
-        
+        //TO-DO
+        //
+        this.cards.remove(card);        
         placeAllCards();
     }
 
@@ -195,8 +207,14 @@ public class Player  extends Actor implements Accepter
      * @return la fila en la que se puede poner la carta
      */
     public CardRow whereCanPlace(Card card){
-       //To-Do:
-    }
+       //TO-DO
+       //
+       //for i in TableGame.rows:
+       //   if i.canaddcard(card):
+       //       return i
+       TableGame TableGame = (TableGame) getWorld();
+       for (CardRow row:TableGame.getRows())
+            {if (row.canAddCard(card)){return row;}}return null;}
     
     /**
      * Coloca automaticamente la carta en la fila correspondiente
@@ -204,14 +222,17 @@ public class Player  extends Actor implements Accepter
     public boolean placeOnArow(Card card){
        boolean placed = false;
        
-       //To-Do:
+       //TO-DO
+       //
+       whereCanPlace(card).addCard(card);
         
        if(placed) {
            Greenfoot.playSound("sounds/card.wav");
            card.reAdd();
        }
        else{
-           //TO-DO:
+           //TO-DO
+           //
        }
        return placed;
     }    
