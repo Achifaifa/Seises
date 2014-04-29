@@ -73,6 +73,14 @@ public class TableGame extends World
      */
     private void addPlayers(){
         //TO-DO: Completa el codigo segun el 2.Ejercicio
+        //
+        //for i in range(3):
+        //  self.players.append(player.player(raw_input("Name?"),image,position)
+        
+        players[0]=new Player("AAA","PPL1.png",Position.SOUTH);
+        players[1]=new Player("BBB","PPL1.png",Position.WEST);
+        players[2]=new Player("CCC","PPL1.png",Position.NORTH);
+        players[3]=new Player("DDD","PPL1.png",Position.EAST);
 
         addObject(players[0], 50, 350);  //jugador WEST
         addObject(players[1], 375, 650); //jugador SOUTH
