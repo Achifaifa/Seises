@@ -237,7 +237,9 @@ public class TableGame extends World
      * @return True si el juego ha terminado y False, en caso contrario
      */
     private boolean isFinished(){
-        //TO-DO:
+        //TO-DO
+        
+        if (rows[0].isCompleted() && rows[1].isCompleted() && rows[2].isCompleted() && rows[3].isCompleted()){return true;}
 
         return false;
     }
@@ -247,7 +249,9 @@ public class TableGame extends World
      */
     private void showTheWinner(){
         String name = getTheWinner();
-        //TO-DO: show in the board
+        
+        
+        //TO-DO
         
     }
     
@@ -256,7 +260,12 @@ public class TableGame extends World
      * @return el nombre del jugador que ha ganado el juego. Formato: nombre (Tipo de jugador)
      */
     private String getTheWinner(){
-        //TO-DO:Implementar 
+        //TO-DO
+        
+        if (!players[0].hasCards()){return players[0].getName();};
+        if (!players[1].hasCards()){return players[1].getName();};
+        if (!players[2].hasCards()){return players[2].getName();};
+        if (!players[3].hasCards()){return players[3].getName();};
         return "";
     }
     

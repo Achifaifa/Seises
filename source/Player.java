@@ -36,7 +36,9 @@ public class Player  extends Actor implements Accepter
         cards = new ArrayList<Card>();
         failures = 0;
     }
-    
+    /**Returns the player name
+     @return this.name*/
+    public String getName(){return name;}
     /**
      * Adds the player without cards
      */
