@@ -275,6 +275,7 @@ public class TableGame extends World
      */
     public boolean isTheWinner(Player player){
         //TO-DO:
+        
         return !player.hasCards();
     }
     
@@ -283,8 +284,8 @@ public class TableGame extends World
      */
     public void setTheWinner(Player player){
         //To-Do:
-        if (isTheWinner(player))
-            theWinner = player;
+        
+        if (isTheWinner(player)){theWinner = player;}
     }
  
     
@@ -295,7 +296,9 @@ public class TableGame extends World
         if (!allCardsDealed)
             turn = new TableTurn<Player>(players);
         else {
-         //TO-DO:Implementar
+         //TO-DO
+         
+         
          
         }
         //To-Do: mostrar en el marcador
