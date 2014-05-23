@@ -22,7 +22,7 @@ public class Player  extends Actor implements Accepter
     /** The orientation of the player */
     private Position position;
     /** The cards in the hands */
-    private ArrayList<Card> cards;
+    protected ArrayList<Card> cards;
     /** The counter to know how many times the player couldn't put a card on the table */
     private int failures;
     
@@ -53,14 +53,17 @@ public class Player  extends Actor implements Accepter
         setRotation(position.getRotation());
         showPlayerInfo();
     }
-
+    
+    /**
+    * Devuelve el numero de 'pasos' realizados por el jugador
+    * @return los pasos
+    */
+    public int getFailures(){return failures;}
     /**
      * Devuelve las cartas de la mano
      * @return las cartas de la mano
      */
-    public ArrayList<Card> getCards(){
-        return cards;
-    }
+    public ArrayList<Card> getCards(){return cards;}
     
     /**
      * Visualiza el texto del jugador
@@ -81,16 +84,11 @@ public class Player  extends Actor implements Accepter
      */
     public boolean hasCards(){
         //TO-DO
-        //
-        //if len(cards)<1:
-        //  return 0
-        //else:
-        //  return 1
+        //if len(cards)<1:return 0
+        //else:return 1
         
         if (this.cards.size()<1){return false;}
-        else{return true;}
-        
-    }
+        else{return true;}}
     
     /**
      * Determina si aceptar la carta es legal, es decir, cumple las reglas del juego
@@ -99,13 +97,11 @@ public class Player  extends Actor implements Accepter
      */
     public boolean canAddCard(Card card)
     {
-        //si el turno es igual al nombre
-        //si viene de la baraja (accepter == null), es decir, no se admite de ningun otro accepter
-        if ((card.getAccepter() == null)){// && ((TableGame)getWorld()).isMyturn(this)) {
-            return true;
-        }
-        return false;
-    }
+       //si el turno es igual al nombre
+       //si viene de la baraja (accepter == null), es decir, no se admite de ningun otro accepter
+       if ((card.getAccepter() == null)){// && ((TableGame)getWorld()).isMyturn(this)) {
+            return true;}
+        return false;}
     
     /**
      * Acepta la carta y lo almacena en su estructura de datos interna
@@ -116,20 +112,16 @@ public class Player  extends Actor implements Accepter
             card.setAccepter(this);
             cards.add(card);
             card.setDraggable(true);
-    
-            placeCard(card);
-        }   
-    }
+            placeCard(card);}}
 
     /**
-     * Coloca la ?ltima carta en la mesa adecuando la posici?n y rotaci?n de la carta
+     * Coloca la ultima carta en la mesa adecuando la posicion y rotacion de la carta
      */
     private void placeCard(Card card){
         int x = getX4card(cards.size());
         int y = getY4card(cards.size());
         card.setLocation(x, y);      
-        card.setRotation(position.getRotation());
-    }
+        card.setRotation(position.getRotation());}
     
     /**
      * Calcula y devuelve la coordenada x para las cartas del jugador
@@ -142,8 +134,7 @@ public class Player  extends Actor implements Accepter
             x = x - (getImage().getWidth() / 2) + playerImage.getWidth() + getOffset(i); //20 + 15*i;
         else if (rotation == 180)
             x = x + (getImage().getWidth() / 2) - playerImage.getWidth() - getOffset(i); // 20 - 15*i;
-        return x;
-    }
+        return x;}
     
     /**
      * Calcula y devuelve la coordenada y para las cartas del jugador
@@ -156,38 +147,28 @@ public class Player  extends Actor implements Accepter
             y = y - (getImage().getWidth()/2) + playerImage.getWidth() + getOffset(i); //20 + 15*i;
         else if (rotation == 270)
             y = y + (getImage().getWidth()/2) - playerImage.getWidth() - getOffset(i); // 20 - 15*i;
-        return y;
-    }
+        return y;}
     
     /**
      * Calcula la diferencia de una carta a otra
      */
     private int getOffset(int i){
         int offset = 20 + 15 * i;
-        return offset;
-    }
+        return offset;}
    
     /**
      * Calcula y devuelve el numero de cartas que tiene el jugador en la mano
      * @return el n?mero de cartas que tiene el jugador en la mano
      */
-    public int numberOfCards(){
-        //TO-DO
-        //
-        //return len(cards)
-        
-        return cards.size();
-    }
+    public int numberOfCards(){return cards.size();}
     
     /**
      * Elimina la carta 'card'
      */
     public void remove(Card card){
         //TO-DO
-        //
         this.cards.remove(card);        
-        placeAllCards();
-    }
+        placeAllCards();}
 
     /**
      * Determina si puede seleccionar la carta 'card' para ponerla encima de la mesa
@@ -195,12 +176,8 @@ public class Player  extends Actor implements Accepter
      */
     public boolean canSelect(Card card){
         TableGame game = (TableGame)getWorld();
-        if (game.areAllCardsDealed() && game.isMyturn(this)){
-                return cards.contains(card);
-        }
-        else
-            return false;
-    }
+        if (game.areAllCardsDealed() && game.isMyturn(this)){return cards.contains(card);}
+        else{return false;}}
     
    
     /**
@@ -210,10 +187,8 @@ public class Player  extends Actor implements Accepter
      */
     public CardRow whereCanPlace(Card card){
        //TO-DO
-       //
        //for i in TableGame.rows:
-       //   if i.canaddcard(card):
-       //       return i
+       //   if i.canaddcard(card): return i
        TableGame TableGame = (TableGame) getWorld();
        for (CardRow row:TableGame.getRows())
             {if (row.canAddCard(card)){return row;}}return null;}
@@ -246,7 +221,7 @@ public class Player  extends Actor implements Accepter
      */
     public List<Card> getCardsOn(Card card){
         if (!cards.contains(card)) return null;
-        //si se visualizan como una pila, entonces las que se han a?adido al final
+        //si se visualizan como una pila, entonces las que se han anadido al final
         List<Card> cardsOn = new ArrayList<Card>();
         boolean encontrado = false;
         Iterator<Card> it = cards.iterator();
@@ -257,9 +232,7 @@ public class Player  extends Actor implements Accepter
         }
         while (it.hasNext())
             cardsOn.add(it.next());
-        return cardsOn;
-    
-    }
+        return cardsOn;}
     
     /**
      * Recoloca todas las cartas que tiene el jugador en la mano
@@ -268,17 +241,14 @@ public class Player  extends Actor implements Accepter
         int i = 1;
         for(Card card: cards){
             card.setLocation(getX4card(i), getY4card(i));
-            i++;
-        }
-    }
+            i++;}}
 
     /**
      * Realiza paso y mueve la carta a otro sitio para el siguiente turno
      */
     public void incrementFailures(Card card){
         failures++;
-        showPlayerInfo();
-    }
+        showPlayerInfo();}
     
     
     /**
@@ -289,7 +259,6 @@ public class Player  extends Actor implements Accepter
         cards.remove(card);
         cards.add(card);
         placeAllCards();
-        card.reAdd();
-    }
+        card.reAdd();}
         
 }

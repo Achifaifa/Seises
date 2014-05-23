@@ -104,30 +104,30 @@ public class CardRow  extends Actor implements Accepter
         return pos;
     }
     
-    
+    /**
+    * Devuelve la lista de cartas
+    * @return lista de cartas
+    */
+
+    public List<Card> getCards(){
+        return cards;
+    }
     /**
      * Acepta la carta y lo almacena en su estructura de datos interna
      * @param la carta
      */ 
-    private void add(Card card, int pos){
-        if (card.getAccepter() != null){
-            Player player = (Player) card.getAccepter();
-            player.remove(card);
-            TableGame game = (TableGame)getWorld();
-            if (game.isTheWinner(player))
-                game.setTheWinner(player);
-            card.setAccepter(this);
-        }
-        card.setAccepter(this);
-        if (pos != 0)
-            cards.add(card);
-        else
-            cards.add(0, card);
-            
-        card.setDraggable(false);
-        card.setRotation(0);
-        placeCard(card);
-    }
+   private void add(Card card, int pos){
+   if (card.getAccepter() != null){
+   ((Player) (card.getAccepter())).remove(card);
+   card.setAccepter(this);}
+   card.setAccepter(this);
+   if (pos != 0)
+   cards.add(card);
+   else
+   cards.add(0, card);
+   card.setDraggable(false);
+   card.setRotation(0);
+   placeCard(card);}
     
     /**
      * Coloca la carta en la fila de la mesa

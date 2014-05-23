@@ -74,14 +74,13 @@ public class TableGame extends World
     private void addPlayers(){
         //TO-DO: Completa el codigo segun el 2.Ejercicio
         //
-        //for i in range(3):
-        //  self.players.append(player.player(raw_input("Name?"),image_path,position)
+        //for i in range(3):self.players.append(player.player(raw_input("Name?"),image_path,position)
         
         players=new Player[4];
-        players[0]=new Player("Player 1","images/ppl1.png",Position.WEST);
-        players[1]=new Player("Player 2","images/ppl1.png",Position.SOUTH);
-        players[2]=new Player("Player 3","images/ppl1.png",Position.EAST);
-        players[3]=new Player("Player 4","images/ppl1.png",Position.NORTH);
+        players[0]=new FoolishPlayer("AI 1","images/ppl1.png",Position.WEST);
+        players[1]=new Player("Player","images/ppl2.png",Position.SOUTH);
+        players[2]=new FoolishPlayer("AI 2","images/ppl1.png",Position.EAST);
+        players[3]=new FoolishPlayer("AI 3","images/ppl1.png",Position.NORTH);
 
         addObject(players[0], 50, 350);  //jugador WEST
         addObject(players[1], 375, 650); //jugador SOUTH
@@ -105,41 +104,27 @@ public class TableGame extends World
      * Devuelve el marcador
      * @return el marcador
      */
-    public Board getBoard(){
-        return board;
-    }
-    
+    public Board getBoard(){return board;}
     /**
      * Devuelve la baraja
      * @return la baraja
      */
-    public Deck getDeck(){
-        return deck;
-    }
-    
-   /**
+    public Deck getDeck(){return deck;}
+    /**
      * Devuelve las filas
      * @return las filas
      */
-    public CardRow[] getRows(){
-        return rows;
-    }
-    
+    public CardRow[] getRows(){return rows;}
     /**
      * Devuelve los jugadores
      * @return los jugadores
      */    
-    public Player[] getPlayers(){
-        return players;
-    }
-    
+    public Player[] getPlayers(){return players;}
     /** 
      * Devuelve el turno
      * @return el turno
      */
-    public TableTurn<Player> getTurn(){
-        return turn;
-    }
+    public TableTurn<Player> getTurn(){return turn;}
     
     /**
      * If the deck is clicked on, show a card o deal all cards
@@ -184,22 +169,45 @@ public class TableGame extends World
      * Reparte todas las cartas entre los jugadores, respetando el turno de cada uno de ellos
      */
     public void dealAllCards(){
-       while (deck.getSize() > 0){
-           showACard();
-           currentPlayer = next();
-           currentPlayer.addCard(showCard);
-       }
-        allCardsDealed = true;
-        setTurn();
-    }
+     while (deck.getSize() > 0){
+     showACard();
+     currentPlayer.addCard(showCard);
+     currentPlayer = next();
+     }
+     allCardsDealed = true;
+     setTurn();}
+
+     public void setTurn(){
+     //TO-DO:Modificar segun el ejercicio 4
+     if (!allCardsDealed)
+     turn = new TableTurn<Player>(players);
+     else {
+     currentPlayer = whoIsFirst();
+     turn = new TableTurn<Player>(players, currentPlayer);
+     }
+     currentPlayer = next();
+     }
+
+     public boolean isMyturn(Player player){return currentPlayer.equals(player);}
+
+     public Player next(){
+     board.update(turn.getNumOfTurn(), turn.getTurn());
+     if (!isFinished()){
+     if (allCardsDealed){
+     if (isTheWinner(currentPlayer))
+     theWinner = currentPlayer;
+     currentPlayer = turn.next();
+     while (!currentPlayer.hasCards())
+     currentPlayer = turn.next();}
+     else
+     currentPlayer = turn.next();}
+     return currentPlayer;}
     
     /**
      * Determina si todas las cartas estan repartidas
      * @return True si todas las cartas estan repartidas y False, en caso contrario
      */
-    public boolean areAllCardsDealed(){
-        return allCardsDealed;
-    }    
+    public boolean areAllCardsDealed(){return allCardsDealed;}    
     
     /**
      * Determina si todas las filas estan vacias
@@ -217,18 +225,15 @@ public class TableGame extends World
      */
     public Player whoIsFirst(){
         //TO-DO
-        //
         //tgt=card.card(Colour.RED,Value.SIX,Suit.HEARTS,false)
         //for i in self.players:
-        //  if tgt in i.cards:
-        //    return i
+        //  if tgt in i.cards:return i
         
         Card tgt=new Card(Card.Colour.RED,Card.Value.SIX,Card.Suit.HEARTS,false);
         if (players[0].getCards().contains(tgt)){return players[0];};
         if (players[1].getCards().contains(tgt)){return players[1];};
         if (players[2].getCards().contains(tgt)){return players[2];};
         if (players[3].getCards().contains(tgt)){return players[3];};
-
         return null;
     }
     
@@ -249,10 +254,7 @@ public class TableGame extends World
      */
     private void showTheWinner(){
         String name = getTheWinner();
-        
-        
         //TO-DO
-        
     }
     
     /**
@@ -261,7 +263,6 @@ public class TableGame extends World
      */
     private String getTheWinner(){
         //TO-DO
-        
         if (!players[0].hasCards()){return players[0].getName();};
         if (!players[1].hasCards()){return players[1].getName();};
         if (!players[2].hasCards()){return players[2].getName();};
@@ -273,55 +274,14 @@ public class TableGame extends World
      * Verifica si el jugador 'player' es el ganador
      * @return True si el jugador el es ganador y False, en caso contrario
      */
-    public boolean isTheWinner(Player player){
-        //TO-DO:
-        
-        return !player.hasCards();
-    }
+    public boolean isTheWinner(Player player){return theWinner==null && !player.hasCards();} 
     
     /**
      * Establece quien es el ganador del juego, antes de que termine la partida.
      */
     public void setTheWinner(Player player){
-        //To-Do:
-        
+        //TO-DO
         if (isTheWinner(player)){theWinner = player;}
     }
- 
-    
-    /** 
-     * Determina que jugador empieza la partida, establece el turno y lo refleja en el marcador
-     */
-    public void setTurn(){
-        if (!allCardsDealed)
-            turn = new TableTurn<Player>(players);
-        else {
-         //TO-DO
-         
-         
-         
-        }
-        //To-Do: mostrar en el marcador
-       
-    }
-
-    /**
-     * Determina si es el turno del jugador 'player' 
-     * @param player un jugador
-     * @return True si el turno es del jugador 'player' y False, en caso contrario
-     */
-    public boolean isMyturn(Player player){
-        return turn.isMyturn(player);
-    }
-    
-    /**
-     * Pasa el turno al siguiente jugador
-     */
-    public Player next(){
-        if (allCardsDealed && isTheWinner(currentPlayer))
-            theWinner = currentPlayer;
-        currentPlayer = turn.next();
-        board.update(turn.getNumOfTurn(), turn.getTurn());
-        return currentPlayer;
-    }
+   
 }

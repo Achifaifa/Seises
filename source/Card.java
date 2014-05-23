@@ -15,19 +15,16 @@ public class Card extends CacheActor
     /** The suits a card can belong to */
     public enum Suit {CLUBS, HEARTS, SPADES, DIAMONDS};
     /** The numbers a card can take */
-    public enum Value {
-        ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING
-        
-    };
+    public enum Value {ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING};
     /** The colours a card can be */
     public enum Colour {RED, BLUE};
 
     /** The card's colour */
     private Colour colour;
     /** The card's suit */
-    private Suit suit;
+    protected Suit suit;
     /** The card's value */
-    private Value value;
+    protected Value value;
     /** Keeps how the card to be show */
     private boolean flipped;
     /** Keeps whether the card can drag or not */
@@ -52,8 +49,7 @@ public class Card extends CacheActor
         value = Value.values()[rand];
         rand = Greenfoot.getRandomNumber(Colour.values().length);
         colour = Colour.values()[rand];
-        draw();
-    }
+        draw();}
     
     /**
      * Generate a card with a colour, suit and value
@@ -67,8 +63,7 @@ public class Card extends CacheActor
         this.value = value;
         this.suit = suit;
         this.flipped = flipped;
-        draw();
-    }
+        draw();}
     
     /**
      * Special constructor called by the joker
@@ -78,8 +73,7 @@ public class Card extends CacheActor
         this.flipped = flipped;
         value = null;
         suit = null;
-        draw();
-    }
+        draw();}
     
     /**
      * Select the image of the card based on its suit, value and colour
@@ -87,75 +81,57 @@ public class Card extends CacheActor
      */
     protected void draw() {
         String fileName = CARD_IMAGE_LOCATION;
-        if(flipped) {
-            fileName += colour;
-            fileName += "flip";
-        }
-        else {
-            fileName += value;
-            fileName += suit;
-        }
+        if(flipped) {fileName += colour;fileName += "flip";}
+        else {fileName += value;fileName += suit;}
         fileName += ".png";
         fileName = fileName.toLowerCase();
-        setImage(fileName);
-    }
-    
+        setImage(fileName);}
+        
+    @Override
+    public String toString(){return suit.toString()+"-"+value.toString();}
+    @Override
+    public boolean equals(Object obj) {
+     if (obj instanceof Card){
+      Card card = (Card) obj;
+      return this.value == card.value && this.suit == card.suit;}
+     return false;}
+     
     /**
      * Set whether the card is flipped over or not
      * @param flipped true if the card is face down, false otherwise
      */
-    public void setFlipped(boolean flipped) {
-        this.flipped = flipped;
-        draw();
-    }
+    public void setFlipped(boolean flipped) {this.flipped = flipped;draw();}
     
     /**
      * Set whether we can drag the card around or not
      * @param drag true if we can drag it around, false otherwise
      */
-    public void setDraggable(boolean drag) {
-        this.canDrag = drag;
-    }
-    
+    public void setDraggable(boolean drag) {this.canDrag = drag;}
     /**
      * Determine whether we can drag the card around or not
      * @return true if we can drag it around, false otherwise
      */
-    public boolean isDraggable() {
-        return canDrag;
-    }
-    
+    public boolean isDraggable() {return canDrag;}
     /**
      * Determine whether the card is flipped or not
      * @return true if the card is face down, false otherwise
      */
-    public boolean isFlipped() {
-        return flipped;
-    }
-    
+    public boolean isFlipped() {return flipped;}
     /**
      * Get the colour of the card
      * @return the colour of the card
      */
-    public Colour getColour() {
-        return colour;
-    }
-    
+    public Colour getColour() {return colour;}
     /**
      * Get the value of the card
      * @return the value of the card
      */
-    public Value getValue() {
-        return value;
-    }
-    
+    public Value getValue() {return value;}
     /**
      * Get the suit of the card
      * @return the suit of the card
      */
-    public Suit getSuit() {
-        return suit;
-    }
+    public Suit getSuit() {return suit;}
     
     /**
      * If we're allowed to drag the card around and manage the dragging.
@@ -166,9 +142,7 @@ public class Card extends CacheActor
         MouseInfo mouse = Greenfoot.getMouseInfo();
         if(! (mouse!=null && mouse.getActor()==this)) return; //If the mouse isn't used on this card, don't do anything
         
-        /*
-         * If we double click a card on top of a players's card, try and add it to a row
-         */
+         //If we double click a card on top of a players's card, try and add it to a row
         if(mouse.getClickCount()==2 && ((getAccepter() instanceof Player)) ){
             Player player = (Player) getAccepter();
             if ( ((TableGame)getWorld()).isMyturn(player) && player.canSelect(this)){
@@ -177,9 +151,7 @@ public class Card extends CacheActor
             }
         }
         
-        /*
-         * Do this on the initial press (at the start of the drag operation
-         */
+         //Do this on the initial press (at the start of the drag operation
         if (Greenfoot.mousePressed(this)) {
             xOffset = getX()-mouse.getX();
             yOffset = getY()-mouse.getY();
@@ -187,17 +159,13 @@ public class Card extends CacheActor
             getCardsOn();
         }
         
-        /*
-         * Do this constantly while the card is being dragged
-         */
+        //Do this constantly while the card is being dragged
         if(Greenfoot.mouseDragged(this)) {
             setLocation(mouse.getX()+xOffset, mouse.getY()+yOffset);
             reAdd();
         }
         
-        /*
-         * Do this when the drag has ended
-         */
+       //Do this when the drag has ended
         if(Greenfoot.mouseDragEnded(this)) {
             tryToPutACard();
         }
@@ -206,9 +174,7 @@ public class Card extends CacheActor
     /**
      * Pasa al siguiente turno
      */
-    private void nextTurn(){
-       ((TableGame)getWorld()).next();
-    }
+    private void nextTurn(){((TableGame)getWorld()).next();}
     
     /**
      * Intenta colocar la carta a alg?n accepter
@@ -221,27 +187,22 @@ public class Card extends CacheActor
             Accepter accepter = itr.next();
             if (accepter.canAddCard(this)){
                 accepter.addCard(this);
-                added = true;
-            }
+                added = true;}
         }
         
         if (added){
             nextTurn();
-            Greenfoot.playSound("sounds/card.wav");                
-        }
-        else {
-            //If we haven't made a legal move, put all the cards back where they were
+            Greenfoot.playSound("sounds/card.wav");}
+        else {//If we haven't made a legal move, put all the cards back where they were
             if (getAccepter() instanceof Player) { // The card returns to the player
                 leaveAllCardsAsBefore();
                 Player player = (Player) getAccepter();
                 if (player.canSelect(this) && ((TableGame)getWorld()).isMyturn(player) ){
                     player.incrementFailures(this);
-                    nextTurn();                
-                }                    
+                    nextTurn();}                    
            }
            else if (getAccepter() == null) { //The card returns to the deck
-               setLocation(getInitialx(), getInitialy());
-            }
+               setLocation(getInitialx(), getInitialy());}
         } 
     }
     
@@ -258,13 +219,9 @@ public class Card extends CacheActor
            
            for(int i=0 ; i < cards.size() ; i++) {
                 Card card = cards.get(i);
-                card.setInitial(card.getX(), card.getY());
-           }
-           
+                card.setInitial(card.getX(), card.getY());}
       }
-      else {
-           cards = new ArrayList<Card>();
-      }
+      else {cards = new ArrayList<Card>();}
     }
 
     /**
@@ -279,43 +236,26 @@ public class Card extends CacheActor
        }
     }
     
-    
     /**
      * Set the initial co-ordinates of the card.
      */
-    public void setInitial(int x, int y) {
-        initialx = x;
-        initialy = y;
-    }
-    
+    public void setInitial(int x, int y) {initialx=x; initialy=y;}
     /**
      * Get the initial x value of the card.
      */
-    public int getInitialx() {
-        return initialx;
-    }
-    
-    
+    public int getInitialx() {return initialx;}
     /**
      * Get the initial y value of the card.
      */
-    private int getInitialy() {
-        return initialy;
-    }
-    
+    private int getInitialy() {return initialy;}
     /**
      * Get the Player or CardRow is part of.
      */
-    public Accepter getAccepter() {
-        return accepter;
-    }
-    
+    public Accepter getAccepter() {return accepter;}
     /**
      * Set the Player or CardRow is part of.
      */
-    public void setAccepter(Accepter accepter) {
-        this.accepter = accepter;
-    }
+    public void setAccepter(Accepter accepter) {this.accepter = accepter;}
     
     /**
      * Remove and add the object to the world
@@ -326,15 +266,11 @@ public class Card extends CacheActor
         int rotation = getRotation();
         World world = getWorld();
         world.removeObject(this);
-        world.addObject(this, x, y);
-    }
+        world.addObject(this, x, y);}
     
     /**
      * Determina si la carta es el 6 de corazones
      * @return True si la crata es el 6 de corazones y False, en caso contrario
      */
-    public boolean isSixHearts(){
-        if (this.value==Value.SIX && this.suit==Suit.HEARTS){return true;}
-        return false;
-    }
+    public boolean isSixHearts(){if (this.value==Value.SIX && this.suit==Suit.HEARTS){return true;}return false;}
 }
