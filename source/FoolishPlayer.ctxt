@@ -1,4 +1,6 @@
 #BlueJ class context
 comment0.params=name\ imageFilename\ position
 comment0.target=FoolishPlayer(java.lang.String,\ java.lang.String,\ Position)
-numComments=1
+comment1.params=
+comment1.target=Card\ selectCard()
+numComments=2

@@ -17,8 +17,7 @@ public class AutoPlayer extends Player{
     Turn turn=(Turn)getWorld();
     turn.next();}}
  
-   public Card selectCard(){
-   for (int i=0;i<super.cards.size();i++){return null;}return null;}
+   public Card selectCard(){return null;}
    
    public Card getSixHearts(){
     for (int i=0; i<super.cards.size(); i++){
