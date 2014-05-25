@@ -77,10 +77,10 @@ public class TableGame extends World
         //for i in range(3):self.players.append(player.player(raw_input("Name?"),image_path,position)
         
         players=new Player[4];
-        players[0]=new FoolishPlayer("AI 1","images/ppl1.png",Position.WEST);
+        players[0]=new Player("AI 1","images/ppl1.png",Position.WEST);
         players[1]=new Player("Player","images/ppl2.png",Position.SOUTH);
-        players[2]=new FoolishPlayer("AI 2","images/ppl1.png",Position.EAST);
-        players[3]=new FoolishPlayer("AI 3","images/ppl1.png",Position.NORTH);
+        players[2]=new Player("AI 2","images/ppl1.png",Position.EAST);
+        players[3]=new Player("AI 3","images/ppl1.png",Position.NORTH);
 
         addObject(players[0], 50, 350);  //jugador WEST
         addObject(players[1], 375, 650); //jugador SOUTH
