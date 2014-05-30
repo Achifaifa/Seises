@@ -9,10 +9,14 @@ import java.util.*;
 
 public class MindedPlayer extends AutoPlayer
 {
+    
     public MindedPlayer(String name, String imageFilename, Position position){
     super(name, imageFilename, position);}
     
-    public ArrayList possibleCards(){return null;}
+    public ArrayList<Card> possibleCards(){return null;}
     
-    public boolean lessStep(Card card,Card card2){return false;}
+    public ArrayList<Card> getPossibleCards(){return possibleCards();}
+    
+    public Card lessSteps(Card card1,Card card2){return null;}
+  
 }

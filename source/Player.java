@@ -179,7 +179,6 @@ public class Player  extends Actor implements Accepter
         if (game.areAllCardsDealed() && game.isMyturn(this)){return cards.contains(card);}
         else{return false;}}
     
-   
     /**
      * Analiza y devuelve la fila en la que se puede colocar la carta
      * @param la carta para colocar
@@ -260,5 +259,5 @@ public class Player  extends Actor implements Accepter
         cards.add(card);
         placeAllCards();
         card.reAdd();}
-        
+    
 }
