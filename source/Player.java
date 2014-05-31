@@ -245,7 +245,7 @@ public class Player  extends Actor implements Accepter
     /**
      * Realiza paso y mueve la carta a otro sitio para el siguiente turno
      */
-    public void incrementFailures(Card card){
+    public void incrementFailures(){
         failures++;
         showPlayerInfo();}
     
