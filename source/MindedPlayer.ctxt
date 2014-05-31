@@ -6,5 +6,5 @@ comment1.target=java.util.ArrayList\ possibleCards()
 comment2.params=
 comment2.target=java.util.ArrayList\ getPossibleCards()
 comment3.params=card1\ card2
-comment3.target=Card\ lessSteps(Card,\ Card)
+comment3.target=boolean\ lessSteps(Card,\ Card)
 numComments=4

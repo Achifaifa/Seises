@@ -198,7 +198,7 @@ public class Card extends CacheActor
                 leaveAllCardsAsBefore();
                 Player player = (Player) getAccepter();
                 if (player.canSelect(this) && ((TableGame)getWorld()).isMyturn(player) ){
-                    player.incrementFailures(this);
+                    player.incrementFailures();
                     nextTurn();}                    
            }
            else if (getAccepter() == null) { //The card returns to the deck

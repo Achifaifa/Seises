@@ -17,6 +17,6 @@ public class MindedPlayer extends AutoPlayer
     
     public ArrayList<Card> getPossibleCards(){return possibleCards();}
     
-    public Card lessSteps(Card card1,Card card2){return null;}
+    public boolean lessSteps(Card card1,Card card2){return true;}
   
 }
